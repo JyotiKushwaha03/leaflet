@@ -172,14 +172,9 @@ document.getElementById('reset').addEventListener('click', function () {
     layers.forEach(function (layer) {
         map.removeLayer(layer);
     });
-    // L.geoJson(statesData,
-    //     {            style: style,
-    //         onEachFeature: onEachFeature
-    //     }).addTo(map);
 });
 
 document.getElementById("searchlocation").addEventListener("input", autosuggestion);
-//document.getElementById("searchlocation").addEventListener("blur", hidecountrylist);
 
 function autosuggestion() {
     var liststr = '';
@@ -200,23 +195,9 @@ function autosuggestion() {
 
 }
 
-// function navigatelist() {
-
-// $(document).on('keypress', '#searchlocation', function (e) {
-//     console.log("inside nav" + e)
-//     switch (e.keyCode || e.which) {
-//         case 40: $('li:nth-child(1)').css('background-color', 'pink');
-
-//         case 38: ;
-//     }
-// })
-
-// }
-
 $("#autosuggestionresults").on('click', '.location', function () {
     document.getElementById('searchlocation').value = $(this).text();
     document.getElementById('searchlocation').setAttribute("data-attr", $(this).attr("data-attr"));
-    //hidecountrylist(e);
 })
 
 document.addEventListener('click', function (event) {
@@ -266,45 +247,3 @@ function onCountryHighLight() {
     }).addTo(map);
     layers.push(countrysearch)
 }
-
-// var searchControl = new L.esri.Controls.Geosearch().addTo(map);
-
-// var results = new L.LayerGroup().addTo(map);
-
-// searchControl.on('results', function (data) {
-//     results.clearLayers();
-//     for (var i = data.results.length - 1; i >= 0; i--) {
-//         results.addLayer(L.marker(data.results[i].latlng));
-//     }
-// });
-
-// setTimeout(function () { $('.pointer').fadeOut('slow'); }, 3400);
-
-// map.addControl(new L.Control.Search({
-//     container: 'findbox',
-//     layer: markersLayer,
-//     initial: false,
-//     collapsed: false
-// }));
-// var marker = L.marker([51.5, -0.09]).addTo(map);
-// marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-
-
-// function onMapClick(e) {
-//     alert("You clicked the map at " + e.latlng);
-// }
-// map.on('click', onMapClick);
-
-
-// function hidecountrylist(event) {
-//     var element = document.getElementsByClassName('location');
-//     if (event.target == element && element.contains(event.target)) {
-//         document.getElementById("autosuggestionresults").innerHTML = "";
-//         console.log(event.target + "----")
-//     }
-//     else {
-//         console.log(event.target)
-//         document.getElementById("autosuggestionresults").innerHTML = "";
-//     }
-//     //     document.getElementById("autosuggestionresults").innerHTML = "";
-// }
