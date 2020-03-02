@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="walmartleaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+</head>
+<!-- ISO-8859-1 -->
+
+<body>
+    <div class="mapcontainer">
+        <div id="map"></div>
+        <div class="coverageareatext">
+            <p id="4gltedata"><span class="networksymbol" id="ltenet"></span>4G LTE Coverage Area</p>
+            <p id="4gdata"><span class="networksymbol" id="g4net"></span>4G Coverage Area</p>
+            <p id="3gdata"><span class="networksymbol" id="g3net"></span>3G Coverage Area</p>
+            <div class="resetmap" id="reset">
+                <span><i class="fa fa-refresh refershicon" aria-hidden="true"></i> Reset Map</span>
+            </div>
+        </div>
+    </div>
+    <div class="searchBtnContainer">
+        <div class="inputsearchcontainer">
+            <input type="text" id="searchlocation" placeholder="Search your location here" />
+            <button type="button" id="searchbutton"><i class="fa fa-search searchicon"></i></button>
+        </div>
+        <ul id="autosuggestionresults">
+        </ul>
+    </div>
+    <!-- <div id="geocoder" class="geocoder"></div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="datajson.js"></script>
+    <script type="text/javascript" src="leaflet.js"></script>
+</body>
+
+</html>

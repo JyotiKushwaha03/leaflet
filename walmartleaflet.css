@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root { 
+    overflow-y: scroll; 
+}
+.mapcontainer{
+    position: relative;
+}
+#map{
+    height: 500px;
+    width: 1400px; 
+    margin: 0 auto;
+}
+#autosuggestionresults{
+    list-style-type: none;
+    padding: 0;
+    cursor: pointer;
+}
+.location{
+    padding: 3px 0;
+}
+#searchlocation{
+    box-shadow: 2px 2px 3px #000000;
+    padding: 5px;
+    width: 100%;
+}
+.searchBtnContainer{
+    display: flex;
+    padding: 20px 10px 5px;
+    flex-direction: column;
+    width: 220px;
+    margin: auto;
+}
+.inputsearchcontainer{
+    position: relative;
+}
+#searchbutton{
+    position: absolute;
+    right: 3px;
+    top: 4px;
+}
+.countrylist{
+    padding: 0 10px;    
+}
+li:focus{
+    background-color: thistle;
+}
+.networksymbol{
+    padding: 0px 0 0px 20px;    
+    margin-right: 10px;
+}
+#ltenet{
+    background-color: #0f8bba;
+}
+#g4net{
+    background-color: #277fa1;
+}
+#g3net{
+background-color: #54d2d6;
+}
+.searchicon{
+    padding: 3px;
+    background-color: #0f8bba;
+}
+.coverageareatext{
+    position: absolute;
+    margin: 0 auto;
+    right: 15%;
+    bottom: 20px;
+}
+.coverageareatext p{
+    cursor: pointer;
+}
+.resetmap{
+    cursor: pointer;
+    position: relative;
+}
+.refershicon{
+    background-color: transparent;
+}
+#resetimg{
+    max-width: 100%;
+    max-height: 100%;
+}
